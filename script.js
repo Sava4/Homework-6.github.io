@@ -8,9 +8,9 @@ while (age < 1 || !Number.isInteger(parseInt(age))) {
     age = prompt('How old are you? Please enter age number', `${lastAge}`);
 }
 
-let name = prompt('Please enter your name');
+let name = String.prototype.trim(prompt('Please enter your name'));
 
-while (name === null || name === '' || name === ' ' || !isNaN(name)) {
+while (name === null || name === '' || !isNaN(name)) {
     lastName = name;
     name = prompt('Please enter your name', `${lastName}`);
 }
