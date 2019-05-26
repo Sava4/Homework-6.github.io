@@ -1,18 +1,13 @@
-let lastAge = 'unmodified'; 
-let lastName = 'unmodified';
-
 let age = prompt('How old are you?');
 
 while (age < 1 || !Number.isInteger(parseInt(age))) {
-    lastAge = age;
-    age = prompt('How old are you? Please enter age number', `${lastAge}`);
+    age = prompt('How old are you? Please enter age number', `${age}`);
 }
 
-let name = String.prototype.trim(prompt('Please enter your name'));
+let name = prompt('Please enter your name').trim();
 
-while (name === null || name === '' || !isNaN(name)) {
-    lastName = name;
-    name = prompt('Please enter your name', `${lastName}`);
+while (name === null || name === '') {
+    name = prompt('Please enter your name once again', `${name}`).trim();
 }
 
 if (age < 18) {
